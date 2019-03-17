@@ -1,13 +1,19 @@
 {{ partial "header.html" . }}
 
 <div class="content">
-  <h1>{{ .Title }}</h1>
+
+  {{ if (eq .Type "about") }}
+    <h1>{{ .Title | lower }}</h1>
+  {{else}}
+    <h1>{{ .Title }}</h1>
+  {{ end }}
+
   <aside>{{ range .Params.tags }}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/">{{ . }}</a></a>&nbsp;&nbsp;&nbsp;{{end}}</aside>
   <p>{{ .Content }}</p>
 </div>
 
 {{ if (eq .Type "posts") }}
-  <p>Written on {{ .Date.Format "Jan 2, 2006"}}.</p>
+  <p>Typed on {{ .Date.Format "Jan 2, 2006"}}.</p>
 {{ end }}
 
 {{ partial "footer.html" . }}

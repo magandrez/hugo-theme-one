@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 
 <div class="content container">
-  <h1>Archives</h1>
+  <h1>archives</h1>
 
   {{ with .Site.GetPage "section" "posts" }}
     {{ range .Data.Pages.GroupByDate "2006" }}
