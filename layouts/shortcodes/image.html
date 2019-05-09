@@ -1,0 +1,10 @@
+<figure>
+  {{ if .IsNamedParams }}
+    <img src="{{.Get "src" }}" alt="{{.Get "alt"}}">
+  {{ else }}
+    <img src="{{.Get 0}}" alt="{{.Get 1}}">
+  {{ end }}
+  <figcaption>
+    <em>{{.Inner}}</em>
+  </figcaption>
+</figure>
