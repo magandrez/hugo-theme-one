@@ -1,5 +1,8 @@
 One
 ===========
+## NOTE
+
+This is a fork of One theme by github.com/resugary.
 
 [One](https://github.com/resugary/hugo-theme-one) is a mininal blog theme for [Hugo](https://gohugo.io/), which is forked from [onetwothree](https://github.com/schollz/onetwothree). It provides some new features and simplification. I tried to keep it simple with less configuration to write rather than play with a theme instead.
 
@@ -11,7 +14,6 @@ Features:
 - Add posts archive support  
 - Syntax highlighting using Chroma  
 - Optimization for text layout  
-- Add Google Analytics support  
 - Add Full-text RSS support
 
 ## Installation
@@ -66,7 +68,6 @@ baseURL = "https://example.com/"
 languageCode = "en-us"
 title = "My Hugo Site"
 theme = "one"
-googleAnalytics = "UA-123-45"
 
 # Chroma Syntax Highlighting
 pygmentsCodefences = true
