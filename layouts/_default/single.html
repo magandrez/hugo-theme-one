@@ -1,11 +1,16 @@
 {{ partial "header.html" . }}
 
 <div class="content">
-
   {{ if (eq .Type "about") }}
-    <h1>{{ .Title | lower }}</h1>
+  <h1>{{ .Title | lower }}</h1>
+  <div class="subtitle">
+    <p>{{ .Params.tagline }}</p>
+  </div>
   {{else}}
-    <h1>{{ .Title }}</h1>
+  <h1>{{ .Title }}</h1>
+  <div class="subtitle">
+    <p>{{ .Params.tagline }}</p>
+  </div>
   {{ end }}
 
   <aside>{{ range .Params.tags }}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/">{{ . }}</a></a>&nbsp;&nbsp;&nbsp;{{end}}</aside>

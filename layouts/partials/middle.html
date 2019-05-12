@@ -1,5 +1,8 @@
 <div class="content">
-    <h1>{{ title .Data.Term  }} ramblings</h1>
+    <h1>{{ title .Data.Term  }} {{ $.Site.Params.blog }}</h1>
+    <div class="subtitle">
+      <p>{{ $.Site.Params.tagline }}</p>
+    </div>
     {{ range first 7 .Pages }}
     {{ if eq .Type "posts"}}
     <p>

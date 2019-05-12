@@ -6,3 +6,11 @@ footer {
 
     font-size: small;
 }
+
+div.subtitle {
+
+    font-style: italic;
+    font-size: small;
+    color: #C0C0C0;
+    padding-bottom: 1em;
+}
