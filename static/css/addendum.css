@@ -1,5 +1,10 @@
 figcaption {
     font-size: small;
+    padding-bottom: 2em;
+}
+
+figure {
+    margin-top: 2em;
 }
 
 footer {
