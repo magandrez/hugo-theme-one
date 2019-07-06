@@ -5,10 +5,10 @@
     </div>
     {{ range first 7 .Pages }}
     {{ if eq .Type "posts"}}
-    <p>
+    <div class="posts">
         <aside>{{ .Date.Format "January 2, 2006"}}</aside>
         <a href="{{ .Permalink }}">{{ .Title }}</a>{{ if .Draft }} <span style="color:#FF4136;">(unpublished)</span>{{ end }}
-    </p>
+    </div>
     {{ end }}
     {{ end }}
 </div>

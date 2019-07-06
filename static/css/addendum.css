@@ -18,3 +18,8 @@ div.subtitle {
     color: #C0C0C0;
     padding-bottom: 1em;
 }
+
+div.posts {
+    margin-bottom: 1em;
+    line-height: 1.45;
+}
