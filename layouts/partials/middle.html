@@ -3,13 +3,12 @@
     <div class="subtitle">
       <p>{{ $.Site.Params.tagline }}</p>
     </div>
-    {{ range first 7 .Pages }}
-    {{ if eq .Type "posts"}}
+    {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+    {{ range $pages.ByPublishDate.Reverse }}
     <div class="posts">
         <aside>{{ .Date.Format "January 2, 2006"}}</aside>
         <a href="{{ .Permalink }}">{{ .Title }}</a>{{ if .Draft }} <span style="color:#FF4136;">(unpublished)</span>{{ end }}
     </div>
-    {{ end }}
     {{ end }}
 </div>
 
