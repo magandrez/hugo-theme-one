@@ -10,10 +10,10 @@ You can check out the demo at https://resugary.github.io/hugo-theme-one.
 
 ![Screenshot](https://github.com/resugary/hugo-theme-one/blob/master/images/screenshot.png)
 
-Features:  
-- Add posts archive support  
-- Syntax highlighting using Chroma  
-- Optimization for text layout  
+Features:
+- Add posts archive support
+- Syntax highlighting using Chroma
+- Optimization for text layout
 - Add Full-text RSS support
 
 ## Installation
@@ -68,11 +68,6 @@ baseURL = "https://example.com/"
 languageCode = "en-us"
 title = "My Hugo Site"
 theme = "one"
-
-# Chroma Syntax Highlighting
-pygmentsCodefences = true
-pygmentsCodefencesGuessSyntax = true
-pygmentsStyle = "pygments"
 
 [params]
     navigation = ["archives.md", "about.md"]
