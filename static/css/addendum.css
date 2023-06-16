@@ -8,12 +8,10 @@ figure {
 }
 
 footer {
-
     font-size: small;
 }
 
 div.subtitle {
-
     font-style: italic;
     color: #C0C0C0;
     padding-bottom: 1em;
@@ -22,4 +20,11 @@ div.subtitle {
 div.posts {
     margin-bottom: 1em;
     line-height: 1.45;
+}
+
+img[src$='#center'] {
+  display: block;
+  margin: 1.0rem auto;
+  max-width: 100%;
+  height: auto;
 }
