@@ -124,6 +124,14 @@ p {
 	line-height: 1.45;
 }
 
+ol {
+	list-style-type: decimal;
+}
+
+ul {
+	list-style-type: circle;
+}
+
 ul,
 ol {
 	margin-bottom: 1em;
@@ -133,7 +141,6 @@ ol {
 li {
 	line-height: 1.75em;
 	margin-left: .75em;
-	list-style-type: decimal;
 }
 
 table {
