@@ -1,24 +1,28 @@
 {{ partial "header.html" . }}
 
-<div class="content">
-  {{ if (eq .Type "about") }}
-  <h1>{{ .Title | lower }}</h1>
-  <div class="subtitle">
-    <p>{{ .Params.tagline }}</p>
-  </div>
-  {{else}}
-  <h1>{{ .Title }}</h1>
-  <div class="subtitle">
-    <p>{{ .Params.tagline }}</p>
-  </div>
-  {{ end }}
+    <div class="content">
+    {{ if (eq .Type "about") }}
+      <h1>{{ .Title | lower }}</h1>
+      <div class="subtitle">
+        <p>{{ .Params.tagline }}</p>
+      </div>
+    {{else}}
+      <h1>{{ .Title }}</h1>
+      <div class="subtitle">
+        <p>{{ .Params.tagline }}</p>
+      </div>
+    {{ end }}
 
-  <aside>{{ range .Params.tags }}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/">{{ . }}</a></a>&nbsp;&nbsp;&nbsp;{{end}}</aside>
-  <p>{{ .Content }}</p>
-</div>
+    {{ range .Params.tags }}
+      <aside>
+        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/">{{ . }}</a>
+      </aside>
+    {{end}}
+      {{ .Content }}
+    </div>
 
-{{ if (eq .Type "posts") }}
-  <p>Typed on {{ .Date.Format "Jan 2, 2006"}}.</p>
-{{ end }}
+    {{ if (eq .Type "posts") }}
+    <p>Typed on {{ .Date.Format "Jan 2, 2006"}}</p>
+    {{ end }}
 
 {{ partial "footer.html" . }}
